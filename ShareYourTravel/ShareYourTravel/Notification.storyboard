@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Qm-0g-qOe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="UJy-jF-OlD">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewController" id="3Qm-0g-qOe" customClass="NotificationViewController" customModule="BoardExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Clp-AC-duW"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKX-F6-8EH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PsA-CJ-BuE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W9-Qe-CAk" customClass="MainNavigationView" customModule="BoardExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="n3Q-Wp-dVn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-Tg-xgx">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No recent news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujN-yb-fo0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ujN-yb-fo0" firstAttribute="leading" secondItem="Dtv-Tg-xgx" secondAttribute="leading" id="5GG-vE-0xa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ujN-yb-fo0" secondAttribute="trailing" id="Wyx-8M-O89"/>
+                                    <constraint firstAttribute="bottom" secondItem="ujN-yb-fo0" secondAttribute="bottom" id="d0n-Qo-BeF"/>
+                                    <constraint firstItem="ujN-yb-fo0" firstAttribute="top" secondItem="Dtv-Tg-xgx" secondAttribute="top" id="lOO-TZ-0EH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGU-Ce-Des" customClass="LoginRequiredUIView" customModule="BoardExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dtv-Tg-xgx" firstAttribute="leading" secondItem="PsA-CJ-BuE" secondAttribute="leading" id="4Er-2s-R4b"/>
+                            <constraint firstAttribute="trailing" secondItem="VGU-Ce-Des" secondAttribute="trailing" id="CuL-kB-P2H"/>
+                            <constraint firstItem="Dtv-Tg-xgx" firstAttribute="top" secondItem="7W9-Qe-CAk" secondAttribute="bottom" id="JpM-Xl-IMn"/>
+                            <constraint firstItem="cKX-F6-8EH" firstAttribute="top" secondItem="Dtv-Tg-xgx" secondAttribute="bottom" id="MLN-0I-dxq"/>
+                            <constraint firstItem="7W9-Qe-CAk" firstAttribute="leading" secondItem="PsA-CJ-BuE" secondAttribute="leading" id="Oj5-CY-HUX"/>
+                            <constraint firstItem="7W9-Qe-CAk" firstAttribute="top" secondItem="PsA-CJ-BuE" secondAttribute="top" id="TKQ-Gp-hFq"/>
+                            <constraint firstItem="VGU-Ce-Des" firstAttribute="top" secondItem="7W9-Qe-CAk" secondAttribute="bottom" id="bm7-bm-ykP"/>
+                            <constraint firstAttribute="trailing" secondItem="7W9-Qe-CAk" secondAttribute="trailing" id="gAy-4m-JEV"/>
+                            <constraint firstItem="cKX-F6-8EH" firstAttribute="top" secondItem="VGU-Ce-Des" secondAttribute="bottom" id="gZ7-2t-Vwr"/>
+                            <constraint firstAttribute="trailing" secondItem="Dtv-Tg-xgx" secondAttribute="trailing" id="gcJ-o7-tIw"/>
+                            <constraint firstItem="VGU-Ce-Des" firstAttribute="leading" secondItem="PsA-CJ-BuE" secondAttribute="leading" id="qQl-Xe-aEo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationView" destination="7W9-Qe-CAk" id="R47-br-6Mb"/>
+                        <outlet property="needLoginView" destination="VGU-Ce-Des" id="59s-Xq-iww"/>
+                        <outlet property="noticeLabel" destination="ujN-yb-fo0" id="vou-Gb-9MH"/>
+                        <segue destination="Ke1-UP-gk1" kind="presentation" identifier="LoginSegue" id="WlM-O5-B11"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpZ-Dd-W3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="-137"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="b8R-IW-LgD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="LoginViewController" id="Ke1-UP-gk1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKg-uc-Iea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="-138"/>
+        </scene>
+    </scenes>
+</document>
