@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="ShareYourTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-bd-jX5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleAspectFill" id="UbY-6k-W5D" customClass="TableHeaderView" customModule="ShareYourTravel" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ijE-IL-xW2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ymy-TA-VlE"/>
+                                </connections>
+                            </tableView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-XT-vE2" customClass="MainNavigationView" customModule="ShareYourTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="P65-DH-uoV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cAg-XT-vE2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="07c-QG-rpw"/>
+                            <constraint firstItem="eTH-bd-jX5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FcT-2G-mtA"/>
+                            <constraint firstAttribute="trailing" secondItem="cAg-XT-vE2" secondAttribute="trailing" id="X5O-XE-BYA"/>
+                            <constraint firstAttribute="trailing" secondItem="eTH-bd-jX5" secondAttribute="trailing" id="cXu-J4-pKY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eTH-bd-jX5" secondAttribute="bottom" id="dNa-lD-Vzg"/>
+                            <constraint firstItem="eTH-bd-jX5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hnH-QX-B2U"/>
+                            <constraint firstItem="cAg-XT-vE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pap-VZ-wiL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="njd-Ks-fME"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="eTH-bd-jX5" id="4tk-Zr-GF9"/>
+                        <outlet property="navigationView" destination="cAg-XT-vE2" id="tAj-sc-cPb"/>
+                        <outlet property="tableViewHeaderView" destination="UbY-6k-W5D" id="Ex7-4R-jFn"/>
+                        <segue destination="TNG-ay-P6f" kind="show" identifier="ShowContentSegue" id="o47-Qc-tg8"/>
+                        <segue destination="MDe-o6-Xzp" kind="presentation" identifier="LoginSegue" id="XRR-tb-4k6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--ContentViewController-->
+        <scene sceneID="lUc-J2-1NG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Content" storyboardName="Content" referencedIdentifier="ContentViewController" id="TNG-ay-P6f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OO-bt-9fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1694" y="31"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="7bT-gP-q8b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="MDe-o6-Xzp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuj-6v-aSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="216"/>
+        </scene>
+    </scenes>
+</document>
