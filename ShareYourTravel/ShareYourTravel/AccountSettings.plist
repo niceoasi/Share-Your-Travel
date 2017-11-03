@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Account</string>
+		<string>Location Services</string>
+		<string>Contatacts</string>
+	</array>
+	<array>
+		<string>Language</string>
+		<string>Push Notifications</string>
+		<string>Email notifications</string>
+	</array>
+	<array>
+		<array>
+			<string>Terms of Service</string>
+			<string>Contents</string>
+		</array>
+		<array>
+			<string>Location Service Policy</string>
+			<string>Contents</string>
+		</array>
+		<array>
+			<string>Privacy Policy</string>
+			<string>Contents</string>
+		</array>
+		<array>
+			<string>Service Providers</string>
+			<string>Contents</string>
+		</array>
+	</array>
+	<array>
+		<string>Help</string>
+		<string>Report a Problem</string>
+	</array>
+	<array>
+		<string>Version</string>
+	</array>
+	<array>
+		<string>Clear image cache</string>
+		<string>Clear all caches</string>
+		<string>Sign out</string>
+	</array>
+</array>
+</plist>
